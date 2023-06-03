@@ -16,6 +16,9 @@ Liquidation of undecollateralized positions below the Liquidation Margin can be 
 
 In the event that a liquidator lacks the necessary collateral to assume a liquidated position, the liquidation transaction is reverted. However, through the concept of Flash Collaterals, the liquidator has the ability to borrow any desired amount of collateral, even if such funds do not exist, as long as they can be returned within the same blockchain transaction. During this borrowing period, the user is free to return to the CFD DEX and execute multiple liquidations, taking various bids and offers to offset positions resulting from the liquidations. If the user manages to generate profit through this process, they can then return the borrowed "flash collateral" and exit the transaction with their earnings.
 
+## Video Demonstraintion
+https://www.youtube.com/watch?v=0ZHpIFXfsH0
+
 ## Implementation Details
 
 The FlashDelta project is built on the Polygon zkEVM blockchain to leverage its scalability and efficiency. Solidity is used for contract development, and JavaScript/Next.js along with Chakra are employed for the frontend interface. Chainlink serves as the oracle for obtaining liquidation reference prices. Given that the DEX relies on Order Books, it is crucial to deploy it on the Polygon zkEVM blockchain to ensure low-cost transactions and optimal performance.
